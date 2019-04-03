@@ -6,13 +6,13 @@ export default class skills extends Component {
           return <img className='col-md-3 skill-img col-sm-6 mt-1' src={item} key={index}/>
       })
       const fam=this.props.skillsFam.map((item,index)=>{
-        return <img className='col-md-3 skill-img col-sm-6 mt-1' src={item}/>
+        return <img className='col-md-3 skill-img col-sm-6 mt-1' src={item} key={index}/>
     })
     return (
       <div>
-        <h6 className='mt-5 center-text'>Proficient</h6>
+        <h5 className='mt-5 center-text'>Proficient:</h5>
         {pro}
-        <h6 className='mt-5'>Familiar</h6>
+        <h5 className='mt-5'>Familiar:</h5>
         {fam}
       </div>
     )
