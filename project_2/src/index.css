@@ -14,10 +14,6 @@ code {
     monospace;
 }
 
-/* div{
-  background-image: url('https://placehold.it/300x300');
-} */
-
 header a{
   text-decoration: none;
   color: #ffffff;
@@ -36,7 +32,7 @@ header img{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 805px;
   text-align: center;
   position: relative;
 }
@@ -44,7 +40,7 @@ header img{
 .port *{
   display: inline-block;
   vertical-align: middle;
-  line-height: 765px;
+  line-height: 870px;
 }
 
 .edu-img{
