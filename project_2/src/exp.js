@@ -5,7 +5,7 @@ export default class exp extends Component {
     <div className="project mt-5 each-card">
         <div className="col-sm">
         <h6 className="card-text mb-1 exetitle">{this.props.expTitle}</h6>
-            <a href={this.props.expUrl} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL+this.props.expImage} className="card-img" alt=""/></a>
+            <a href={this.props.expUrl} target="_blank" rel="noopener noreferrer"><img src={process.env.PUBLIC_URL+"/assets/"+this.props.expImage} className="card-img" alt=""/></a>
             <div className="card-body">
                 <ul>
                     <li>
