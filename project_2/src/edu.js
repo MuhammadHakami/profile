@@ -12,7 +12,7 @@ export default class edu extends Component {
                     <li>{this.props.eduDesc}</li>
                 </ul>
             </div>
-            <img className='edu-img' src={process.env.PUBLIC_URL+this.props.eduImage}/>
+            <img className='edu-img' src={process.env.PUBLIC_URL+this.props.eduImage} alt=""/>
         </div>
       </div>
     )
