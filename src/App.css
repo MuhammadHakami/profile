@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+  /* High-End Palette */
+  --bg-color: #F2F0E9;
+  /* Museum Paper */
+  --ink-color: #121212;
+  /* Rich Black */
+  --accent-color: #D4C5A0;
+  /* Architectural Sand */
+  --grid-line: rgba(18, 18, 18, 0.1);
+  /* Subtle Divider */
+  --card-hover: #EBE8E0;
+}
+
+body {
+  background-color: var(--bg-color) !important;
+  color: var(--ink-color) !important;
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+/* Noise Texture Overlay (VG-84 Style) */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.06;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Typography System */
+h1 {
+  font-size: 8rem;
+  font-weight: 900;
+  letter-spacing: -0.04em;
+  line-height: 0.85;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  border-bottom: 1px solid var(--ink-color);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+h2::before {
+  content: "■";
+  margin-right: 1rem;
+  font-size: 0.8em;
+}
+
+h3,
+h4,
+.project-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1;
+}
+
+p,
+li,
+.lead {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Layout - Grid System */
+.app-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr 1fr 1fr 80px;
+  /* Margins + 3 Col */
+  border-left: 1px solid var(--grid-line);
+  border-right: 1px solid var(--grid-line);
+  min-height: 100vh;
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--bg-color);
+}
+
+/* Vertical Grid Lines */
+.grid-guide {
+  border-right: 1px solid var(--grid-line);
+  height: 100%;
+}
+
+/* Content Wrappers */
+.full-width {
+  grid-column: 1 / -1;
+}
+
+.main-col {
+  grid-column: 2 / -2;
+}
+
+/* Navbar */
+.nav-bar {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  border-bottom: 1px solid var(--ink-color);
+  align-items: center;
+  z-index: 10;
+}
+
+.logo {
+  font-weight: 900;
+  font-size: 1.2rem;
+  letter-spacing: -0.02em;
+  text-decoration: none;
+  color: var(--ink-color);
+}
+
+.nav-links a {
+  font-family: 'Space Mono', monospace;
+  margin-left: 2rem;
+  color: var(--ink-color);
+  text-decoration: none;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.nav-links a:hover {
+  text-decoration: line-through;
+}
+
+/* Hero */
+.hero-container {
+  grid-column: 2 / 5;
+  padding: 8rem 0;
+  border-bottom: 1px solid var(--ink-color);
+  position: relative;
+}
+
+.hero-meta {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  display: block;
+}
+
+/* Projects */
+.project-item {
+  border-bottom: 1px solid var(--grid-line);
+  padding: 4rem 0;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+
+.project-item:hover {
+  background: var(--card-hover);
+}
+
+.project-tech {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  border: 1px solid var(--ink-color);
+  border-radius: 50px;
+  padding: 0.2rem 0.6rem;
+  margin-right: 0.5rem;
+  text-transform: uppercase;
+}
+
+/* Footer */
+.footer-section {
+  grid-column: 1 / -1;
+  background: var(--ink-color);
+  color: var(--bg-color);
+  padding: 4rem 2rem;
+}
+
+.footer-section p,
+.footer-section a {
+  color: var(--bg-color);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .app-grid {
+    grid-template-columns: 20px 1fr 20px;
+  }
+
+  .grid-guide {
+    display: none;
+  }
+
+  .hero-container,
+  .main-col {
+    grid-column: 2 / 3;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Animations */
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin 120s linear infinite;
+}
+
+.spin-reverse-slow {
+  animation: spin 180s linear reverse infinite;
+}
