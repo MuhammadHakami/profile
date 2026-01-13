@@ -15,7 +15,7 @@
     "start": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "predeploy": "bun run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
   "eslintConfig": {
