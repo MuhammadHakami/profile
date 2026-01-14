@@ -123,14 +123,16 @@ export const projectsData = [
         description: "Engineered an agentic AI system capable of navigating mobile apps and websites for seamless purchases and scheduling. Integrated Speech-to-Action capabilities with AR glasses.",
         date: "2025",
         tech: ["Agentic AI", "Speech-to-Action", "AR"],
-        image: "tour_guide_ai.png"
+        image: "neurihla.png",
+        link: "https://muhammadhakami.github.io/NeuRihla/"
     },
     {
         title: "Agritech Hyper-Spectral Sensing",
         description: "Estimated crop conditions (water, nutrition, fertilizer needs) for every 9m² parcel across Saudi Arabia using satellite and drone data. Adapted digital twin simulations for open farms.",
         date: "2025",
         tech: ["Remote Sensing", "Digital Twin", "Agritech"],
-        image: "agritech_sensing.png"
+        image: "neuandalus.png",
+        link: "https://muhammadhakami.github.io/NeuAndalus/"
     },
     {
         title: "Large World Models Nuclear Simulation",
@@ -168,14 +170,14 @@ export const projectsData = [
         link: "https://github.com/MuhammadHakami/Machine_Learning_Projects/blob/master/Market_Prediction/time_series.ipynb",
         image: "download.png"
     },
-    {
-        title: "Flower Classification with Transfer Learning",
-        description: "Classified 102 types of flowers using a VGG model and Transfer Learning in PyTorch, achieving high accuracy on complex datasets.",
-        date: "2019",
-        tech: ["VGG", "Transfer Learning", "PyTorch"],
-        link: "https://github.com/MuhammadHakami/Machine_Learning_Projects/blob/master/Transfer_learning/transfer_learning_project.ipynb",
-        image: "transfer_learning.png"
-    },
+    // {
+    //     title: "Flower Classification with Transfer Learning",
+    //     description: "Classified 102 types of flowers using a VGG model and Transfer Learning in PyTorch, achieving high accuracy on complex datasets.",
+    //     date: "2019",
+    //     tech: ["VGG", "Transfer Learning", "PyTorch"],
+    //     link: "https://github.com/MuhammadHakami/Machine_Learning_Projects/blob/master/Transfer_learning/transfer_learning_project.ipynb",
+    //     image: "transfer_learning.png"
+    // },
     {
         title: "Advanced Housing Regression & Classification",
         description: "Won first place in two offline Kaggle competitions by developing high-performance regression models for housing price prediction.",
