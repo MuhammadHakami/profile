@@ -26,7 +26,7 @@ const ContactView = ({ onBack, profileData }) => {
                         {/* Form Section */}
                         <div className="col-md-8">
                             <form
-                                action={`https://formspree.io/f/mqaeewne`}
+                                action="https://formspree.io/EngMuhammadHakami@gmail.com"
                                 method="POST"
                                 className="contact-form"
                             >
