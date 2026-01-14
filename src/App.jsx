@@ -73,23 +73,41 @@ function App() {
       {/* Divider */}
       <div className="full-width" style={{ borderBottom: '1px solid var(--ink-color)' }}></div>
 
-      {/* Projects Section */}
       <section id="work" className="main-col" style={{ paddingTop: '6rem', paddingBottom: '6rem' }}>
-        <h2>01 / Selected Works</h2>
+        <div className="d-flex justify-content-between align-items-baseline mb-5">
+          <h2>01 / Selected Works</h2>
+          <span className="text-secondary font-monospace" style={{ fontSize: '0.8rem' }}>TOTAL_PROJECTS: {projectsData.length}</span>
+        </div>
+
         {projectsData.map((project, index) => (
           <div key={index} className="project-item">
             <div className="row">
               <div className="col-md-8">
-                <h3 className="project-title mb-3">{project.title}</h3>
-                <p className="mb-4" style={{ opacity: 0.7 }}>{project.description}</p>
-                <div>
+                <div className="d-flex align-items-center mb-2">
+                  <span className="project-tech" style={{ margin: 0, marginRight: '1rem', background: 'var(--ink-color)', color: 'var(--accent-color)' }}>{project.date}</span>
+                  <h3 className="project-title my-0" style={{ fontSize: '1.8rem' }}>{project.title}</h3>
+                </div>
+                <p className="mb-4" style={{ opacity: 0.7, fontSize: '1.1rem', lineHeight: '1.6' }}>{project.description}</p>
+                <div className="mb-4">
                   {project.tech.map((t, i) => (
                     <span key={i} className="project-tech">{t}</span>
                   ))}
                 </div>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-brutal-small"
+                  >
+                    VIEW PROJECT →
+                  </a>
+                )}
               </div>
               <div className="col-md-4 text-right d-none d-md-block">
-                <span style={{ fontFamily: 'Space Mono', fontSize: '3rem', opacity: 0.1 }}>0{index + 1}</span>
+                <span style={{ fontFamily: 'Space Mono', fontSize: '3rem', opacity: 0.1 }}>
+                  {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                </span>
               </div>
             </div>
           </div>
