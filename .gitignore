@@ -40,3 +40,4 @@ bun.lockb
 # Cache
 .cache
 .eslintcache
+.vercel
